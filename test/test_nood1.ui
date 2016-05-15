@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_nood1</class>
+ <widget class="QWidget" name="Form_nood1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>160</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>처음으로</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Adobe Arabic</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>휴게소 시설</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>전체 보기</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>70</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>검색</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>추가/수정/삭제</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form_nood1</receiver>
+   <slot>slot1_root()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>171</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Form_nood1</receiver>
+   <slot>slot1_nood1_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>113</x>
+     <y>51</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Form_nood1</receiver>
+   <slot>slot1_nood1_2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Form_nood1</receiver>
+   <slot>slot1_nood1_3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>52</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slot1_root()</slot>
+  <slot>slot1_nood1_1()</slot>
+  <slot>slot1_nood1_2()</slot>
+  <slot>slot1_nood1_3()</slot>
+ </slots>
+</ui>
