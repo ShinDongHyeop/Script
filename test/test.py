@@ -2,6 +2,7 @@ import sys
 
 from PyQt4 import QtGui, QtCore
 
+from data import *
 from test_root_ui import *
 from test_nood1_ui import *
 from test_nood1_1_ui import *
@@ -23,6 +24,7 @@ class MyForm(QtGui.QMainWindow):
         self.ui.setupUi(self)
 
     def slot1_nood1(self):
+        launcherFunction('l')
         self.nood1 = Nood1Form()
         self.nood1.show()
         self.close()
@@ -84,6 +86,32 @@ class Nood1_1Form(QtGui.QMainWindow):
         self.ui = Ui_Form_nood1_1()
         self.ui.setupUi(self)
 
+        book = PrintTest()
+        size = 0
+        for item in book:
+            if item.nodeName in "list":
+                size += 1
+        self.ui.tableWidget.setRowCount(size)
+        widget = 0
+        for item in book:
+            if item.nodeName == "list":  # 엘리먼트를 중 book인 것을 골라 냅니다.
+                subitems = item.childNodes  # book에 들어 있는 노드들을 가져옵니다.
+                for atom in subitems:
+                    if atom.nodeName in "serviceAreaName":
+                        data = QtGui.QTableWidgetItem(atom.firstChild.nodeValue)
+                        self.ui.tableWidget.setItem(widget, 0, data)
+                    if atom.nodeName in "direction":
+                        data = QtGui.QTableWidgetItem(atom.firstChild.nodeValue)
+                        self.ui.tableWidget.setItem(widget, 1, data)
+                    if atom.nodeName in "convenience":
+                        data = QtGui.QTableWidgetItem(atom.firstChild.nodeValue)
+                        self.ui.tableWidget.setItem(widget, 2, data)
+                    if atom.nodeName in "telNo":
+                        data = QtGui.QTableWidgetItem(atom.firstChild.nodeValue)
+                        self.ui.tableWidget.setItem(widget, 3, data)
+
+                widget += 1
+
     def slot1_nood1(self):
         self.nood = Nood1Form()
         self.nood.show()
@@ -104,7 +132,42 @@ class Nood1_2Form(QtGui.QMainWindow):
         return
 
     def slot1_serch(self):
-        return
+        self.ui.tableWidget.clear()
+        book = PrintTest()
+        tag = self.ui.comboBox.currentText()
+        if tag == '휴게소명':
+            tag = "serviceAreaName"
+        else:
+            tag = "direction"
+        keyword = self.ui.textEdit.toPlainText()
+        size = 0
+        for item in book:
+            if item.nodeName in "list":
+                subitems = item.childNodes  # book에 들어 있는 노드들을 가져옵니다.
+                for atom in subitems:
+                    if ((atom.firstChild.nodeValue in keyword) and (atom.nodeName in tag)):
+                        size += 1
+        self.ui.tableWidget.setRowCount(size)
+        widget = 0
+        for item in book:
+            if item.nodeName == "list":  # 엘리먼트를 중 book인 것을 골라 냅니다.
+                subitems = item.childNodes  # book에 들어 있는 노드들을 가져옵니다.
+                for atom in subitems:
+                    if ((atom.firstChild.nodeValue in keyword) and (atom.nodeName in tag)):
+                        for Item in subitems:
+                            if Item.nodeName in "serviceAreaName":
+                                data = QtGui.QTableWidgetItem(Item.firstChild.nodeValue)
+                                self.ui.tableWidget.setItem(widget, 0, data)
+                            if Item.nodeName in "direction":
+                                data = QtGui.QTableWidgetItem(Item.firstChild.nodeValue)
+                                self.ui.tableWidget.setItem(widget, 1, data)
+                            if Item.nodeName in "convenience":
+                                data = QtGui.QTableWidgetItem(Item.firstChild.nodeValue)
+                                self.ui.tableWidget.setItem(widget, 2, data)
+                            if Item.nodeName in "telNo":
+                                data = QtGui.QTableWidgetItem(Item.firstChild.nodeValue)
+                                self.ui.tableWidget.setItem(widget, 3, data)
+                        widget += 1
 
 class Nood1_3Form(QtGui.QMainWindow):
     def __init__(self, parent=None):
