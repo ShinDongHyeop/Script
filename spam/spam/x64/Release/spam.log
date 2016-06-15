@@ -1,0 +1,17 @@
+﻿  spammodule.c
+spammodule.c(7): warning C4047: 'return': 'PyObject *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+spammodule.c(20): warning C4047: 'return': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+spammodule.c(44): warning C4047: '함수': 'int (__cdecl *)(const void *,const void *)'의 간접 참조 수준이 'PyObject *(__cdecl *)(const void *,const void *)'과(와) 다릅니다.
+spammodule.c(44): warning C4024: 'qsort': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+spammodule.c(61): warning C4047: 'return': 'int'의 간접 참조 수준이 'PyObject *'과(와) 다릅니다.
+spammodule.c(67): warning C4047: '초기화 중': 'PyCFunction'의 간접 참조 수준이 'int (__cdecl *)(PyObject *,PyObject *)'과(와) 다릅니다.
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1189,5): warning MSB8012: TargetPath(C:\Users\SeungHyen\PycharmProjects\spam\x64\Release\spam.dll) does not match the Linker's OutputFile property value (C:\Users\SeungHyen\PycharmProjects\spam\x64\Release\spam.pyd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1190,5): warning MSB8012: TargetExt(.dll) does not match the Linker's OutputFile property value (.pyd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+spammodule.obj : warning LNK4197: 'PyInit_spam' 내보내기가 여러 번 지정되었습니다. 첫째 사양을 사용합니다.
+     C:\Users\SeungHyen\PycharmProjects\spam\x64\Release\spam.lib 라이브러리 및 C:\Users\SeungHyen\PycharmProjects\spam\x64\Release\spam.exp 개체를 생성하고 있습니다.
+  코드를 생성하고 있습니다.
+  1 of 3 functions (33.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  spam.vcxproj -> C:\Users\SeungHyen\PycharmProjects\spam\x64\Release\spam.dll

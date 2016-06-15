@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Traffic_view</class>
+ <widget class="QWidget" name="Traffic_view">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>350</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>뒤로가기</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>491</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Adobe Arabic</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>고속도로 교통 상황(서울-지방) 전체보기</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>181</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>교통량 정보</string>
+   </property>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>161</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <row>
+     <property name="text">
+      <string>전국</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>서울방향</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>지방방향</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>교통량</string>
+     </property>
+    </column>
+    <item row="0" column="0">
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>181</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>조회 날짜/시간</string>
+   </property>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;날짜 : &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;시간 : &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>70</y>
+     <width>161</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>서울-&gt;지방</string>
+   </property>
+   <widget class="QTableWidget" name="tableWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>141</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <row>
+     <property name="text">
+      <string>서울-&gt;대전</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>서울-&gt;대구</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>서울-&gt;울산</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>서울-&gt;부산</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>서울-&gt;광주</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>서울-&gt;목포</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>서울-&gt;강릉</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>소요 시간</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignVCenter</set>
+     </property>
+    </column>
+    <item row="0" column="0">
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>70</y>
+     <width>161</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>지방-&gt;서울</string>
+   </property>
+   <widget class="QTableWidget" name="tableWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>141</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <row>
+     <property name="text">
+      <string>대전-&gt;서울</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>대구-&gt;서울</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>울산-&gt;서울</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>부산-&gt;서울</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>광주-&gt;서울</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>목포-&gt;서울</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>강릉-&gt;서울</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>소요 시간</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignVCenter</set>
+     </property>
+    </column>
+    <item row="0" column="0">
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Traffic_view</receiver>
+   <slot>back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>361</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>back()</slot>
+ </slots>
+</ui>
